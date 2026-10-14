@@ -1,27 +1,22 @@
 # 📊 Credit Risk Analysis Dashboard
 Interactive Dashboard Link: https://app.powerbi.com/view?r=eyJrIjoiZDMwOTA0MWQtMGUxNS00ZGJkLTg1MTUtYzRmMjE0YjI3MDE3IiwidCI6IjQ2NTRiNmYxLTBlNDctNDU3OS1hOGExLTAyZmU5ZDk0M2M3YiIsImMiOjl9
 
-## 👤 Author
-* Hiep Dylan
-* LinkedIn: https://www.linkedin.com/in/hiepledai-dylan/
+## 👤 Authors & Contributions
+**Lường Quốc Hùng (IT Business Analyst / UI Designer):** Gathered credit business requirements, established the Risk Segmentation Framework, designed drill-down logic connecting behavioral/financial variables, and extracted actionable Business Insights from the data to support decision-making.
+**[Hiep Dylan] (Data Analyst):** Processed and cleaned raw data, built the Data Model, developed advanced DAX functions, and implemented data visualization on Power BI.
 
 Example: Individuals with less than one year of work experience have the highest default rate (27.94%). When clicking on the “<1 year” column in the chart, we can further drill down into the data as follows. Within this group (<1 YOE), at the time of the loan, unemployed individuals have the highest default rate (27.94%). They typically borrow for medical expenses or debt consolidation. If we only analyze Job Type in isolation, we would not uncover this insight! (Dashboard page 1)
 
-## 📌 Overview
-
-This project focuses on analyzing credit risk in a banking dataset to understand borrower behavior, loan distribution, and key factors driving loan default.
-
-The objective is to uncover insights that support better credit risk assessment and portfolio management using data-driven approaches.
+## 📌 Business Overview
+The bank faces significant credit risk from personal loans. This project analyzes a dataset of **32,581 loan records** with an estimated total exposure of **$312M**. The current Default Rate is relatively high at **21.82%**, requiring a multi-dimensional analysis framework to optimize the credit risk assessment process and portfolio management.
 
 ---
 
-## 🎯 Objectives
-
-* Analyze loan portfolio distribution across different customer segments
-* Identify key drivers of default risk
-* Develop a risk segmentation framework (Low, Medium, High)
-* Build an interactive dashboard for exploratory analysis
-
+## 🎯 Business Objectives
+**Portfolio Analysis:** Evaluate the distribution of loans across various customer segments.
+**Key Drivers Identification:** Determine the critical factors directly influencing the default rate.
+**Framework Development:** Develop a risk segmentation framework (Low, Medium, High) based on financial indicators (DTI, LTI) and borrower behavior.
+**Dashboard Design:** Outline an interactive dashboard system to help Risk Managers easily monitor and conduct exploratory analysis.
 ---
 
 ## 📂 Dataset
