@@ -40,115 +40,48 @@ The dataset includes borrower demographics, financial indicators, and loan-relat
 
 ---
 
-## 📈 Dashboard Features
-
-* Interactive Power BI dashboard with slicers and drill-down functionality
-* Risk segmentation based on financial and behavioral indicators
-* Multi-level analysis across employment type, loan purpose, and borrower profile
-* Dynamic comparison of default patterns across segments
-
----
-
-## 🔍 Key Insights
-
-* Higher debt-to-income and credit utilization ratios are strongly associated with increased default risk
-* Borrowers with past delinquencies or prior defaults show significantly higher risk
-* Employment stability and loan purpose further influence default patterns
-* Certain segments combine high risk with high loan exposure, indicating potential portfolio vulnerabilities
+## ⚙️ Risk Segmentation Framework & Business Logic
+To evaluate borrower risk effectively, I established a risk stratification framework based on the Debt-to-Income (DTI) and Loan-to-Income (LTI) ratios:
+*   **Low Risk (<20%):** Lowest risk, strong repayment capability.
+*   **Medium Risk (20–40%):** Moderate risk, can be approved but requires monitoring.
+*   **High Risk (41–60%):** High risk, warning of financial burden.
+*   **Very High Risk (>60%):** Highest risk, imminent danger of default.
 
 ---
-# 📊 Dashboard Pages
-## 🎯 1. Credit Risk Overview
-### Overall Risk
-![image_alt](https://github.com/ledaihiepdylan/Credit-Risk---Banking-Analysis-Hiep-Dylan/blob/68843a9d8952c4cf1a058bbe176ced7f7855d822/Source/Overview.jpg)
 
-The dataset includes 32,581 borrowers, with a total loan exposure of approximately $312M. Among them, 7,108 borrowers (21.82%) have defaulted, indicating a relatively high overall default rate.
+## 📸 Dashboard Previews & Key Insights
 
-### Gender Distribution
-* Male: ~50.25%
-* Female: ~49.75%
+### 1. Credit Risk Overview
+![Credit Risk Overview](Source/Overview.jpg)
 
-Demographic factors such as gender, employment type are relatively evenly distributed across the dataset. Additionally, there are no significant differences in default rates among these groups.
+*   **Overall Risk:** The dataset includes 32,581 borrowers with ~$312M total exposure. 7,108 borrowers (21.82%) have defaulted.
+*   **Demographics:** Default rates show no significant differences across gender (~50.25% Male / ~49.75% Female). However, the **60+ age group** exhibits the highest default rate.
+*   **Loan Grade:** Grades A–C account for a large portion of total loan volume. Lower grades (D–G) represent extreme default risk.
 
-### Loan Grade
+### 2. Risk Exposure & Behavior Analysis
+![Risk Exposure 1](Source/Risk%20Analysis%201.jpg)
 
-*Lower grades (D–G) represent extreme default risk
-*However, Grades A–C still account for a large portion of total loan volume
+*   **Loan Intent:** Debt Consolidation, Medical, and Home-related loans account for the highest proportions. High-frequency categories may indicate structural demand, but also potential concentration of risk.
+*   **Employment Stability (Years of Experience):** Default rate is highest for `< 1 year experience` or `Unknown` and decreases as experience increases. Employment stability is a clear driver of risk.
+*   **Default History:** 67.27% of borrowers have defaulted before. Past default behavior is a strong predictor of future default, confirming that credit history is one of the most important risk indicators.
 
-### Age Agroup
-* Highest default rate: 60+ group
-* Lower but still notable: younger groups
+![Risk Exposure 2](Source/Risk%20Analysis%202.jpg)
+
+*   **Debt-to-Income (DTI) & Loan-to-Income (LTI):** There is a strong positive relationship between debt burden and default risk. Very High ratios (>60%) indicate the highest likelihood of default.
+*   **Interest Rate & Loan Grade:** Default rate increases sharply from Grade A to G (nearly 100% default rate for G). The very high interest group (>16%) shows a significantly higher default rate.
+*   **Past Delinquencies:** Borrowers with major past delinquencies show higher default rates than "clean" profiles. Even before default happens, repayment issues are already visible.
+
+### 3. Geographic Risk Distribution
+![Location](Source/Location.jpg)
+
+*   Default rates do not vary drastically across macro-regions. However, **Canada** ranks highest, followed by the USA and the UK.
+*   At the city level, **Vancouver (Canada)** has the highest default rate among all locations.
 
 ---
-## Risk Exposure 
-![image_alt](https://github.com/ledaihiepdylan/Credit-Risk---Banking-Analysis-Hiep-Dylan/blob/92437698013357af74b348d9462700f35e503d0e/Source/Risk%20Analysis%201.jpg)
-
-### Loan Intent
-Loan purposes such as Debt Consolidation, Medical, and Home-related loans account for the highest proportions, while categories like Education and Venture are lower.
-
-Different loan purposes reflect different financial pressures. High-frequency categories may indicate structural demand, but also potential concentration of risk.
-
-### Employment Stability (Years of Exerience)
-
-Default rate is highest for: 
-* Unknown
-* < 1 year experience
-
-And decreases as experience increases. Employment stability is a clear driver of risk, less experience -> unstable income -> higher default probability
-
-### Loan Term
-There is no correlation between the loan term and the default rate.
-
-### Default History
-Past default behavior is a strong predictor of future default, confirming that credit history is one of the most important risk indicators.
-
-* 67.27% of borrowers have defaulted before
-* Only 32.73% have clean history
-
-### DTI (Debt-to-Income)
-* Low (<20%) → lowest risk
-* Medium (20–40%) → moderate
-* High (41–60%) → high
-* Very High (>60%) → highest
-
-There is a strong positive relationship between debt burden and default risk. The higher the proportion of income allocated to total debt obligations, the greater the likelihood of default
-
-![image_alt](https://github.com/ledaihiepdylan/Credit-Risk---Banking-Analysis-Hiep-Dylan/blob/92437698013357af74b348d9462700f35e503d0e/Source/Risk%20Analysis%202.jpg)
-
-### Loan Grade
-
-Default rate increases sharply from Grade A to G. A–C are relatively low default rates. But G: nearly 100% default rate
-
-### Interest Rate
-
-Very High (>16%) interest group shows significantly higher default rate. There is a clear relationship between interest rate and default risk, higher-risk borrowers are charged higher interest rates
-
-### Past Delinquencies
-
-Borrowers with major past delinquencies show higher default rates than “clean” profiles. Even before default happens, repayment issues are already visible
-
-
-### Loan-to-Income Ratio (LTI)
-* Low (<20%) → lowest risk
-* Medium (20–40%) → moderate
-* High (41–60%) → high
-* Very High (>60%) → highest
-
-This confirms a strong positive correlation between financial burden and default risk. The more income is allocated to loan repayment, the higher the likelihood of default
-
-## Geographic Risk Distribution
-![image_alt](https://github.com/ledaihiepdylan/Credit-Risk---Banking-Analysis-Hiep-Dylan/blob/92437698013357af74b348d9462700f35e503d0e/Source/Location.jpg)
-
-Default rates do not significantly so much across regions. However, Canada ranks highest, followed by the USA and the UK.  
-
-At the city level, Vancouver (Canada) has the highest default rate among all locations.
-
 
 ## 🛠 Tools & Technologies
-
-* Power BI
-* DAX (Data Analysis Expressions)
-* Data Modeling & Visualization
+*   **Business Analysis Core:** Risk Segmentation Framework, Requirements Analysis, Drill-down Logic Design, Dashboard UI/UX Wireframing.
+*   **Data Execution (By Data Analyst):** Power BI, DAX (Data Analysis Expressions), Data Modeling & Visualization.
 
 ---
 
